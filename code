@@ -1,0 +1,141 @@
+//g f a b
+//e d c .
+//9= A,B,G,F,C
+//8= A B C D E F G
+//7=A B C 
+//6= A F E D C G
+//5= A F G C D 
+//4= F G B C
+//3= A B G C D
+//2=A B G E D
+//1=B C
+//0=A F E D C B
+int G = 2;
+int F = 3;
+int A = 4;
+int B = 5;
+int E = 6;
+int D = 7;
+int C = 8;
+int DP= 9;
+int delayTime= 1000;
+void setup()
+{
+  pinMode(G,OUTPUT);
+  pinMode(F,OUTPUT);
+  pinMode(A,OUTPUT);
+  pinMode(B,OUTPUT);
+  pinMode(E,OUTPUT);
+  pinMode(D,OUTPUT);
+  pinMode(C,OUTPUT);
+  pinMode(DP,OUTPUT);
+
+}
+
+void loop()
+{
+//9
+  digitalWrite(G,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,LOW);
+  digitalWrite(D,LOW);
+  digitalWrite(C,HIGH);
+ 
+  delay(delayTime);
+
+  //8
+  digitalWrite(G,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(C,HIGH);
+   delay(delayTime);
+  //7
+  digitalWrite(G,LOW);
+  digitalWrite(F,LOW);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,LOW);
+  digitalWrite(D,LOW);
+  digitalWrite(C,HIGH);
+   delay(delayTime);
+
+  //6
+  digitalWrite(G,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,LOW);
+  digitalWrite(E,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(C,HIGH);
+
+   delay(delayTime);
+  //5
+  digitalWrite(G,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,LOW);
+  digitalWrite(E,LOW);
+  digitalWrite(D,HIGH);
+  digitalWrite(C,HIGH);
+  
+  digitalWrite(G,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(A,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(C,HIGH);
+ delay(delayTime);
+  //4
+  digitalWrite(G,HIGH);
+  digitalWrite(F,HIGH);
+  digitalWrite(A,LOW);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,LOW);
+  digitalWrite(D,LOW);
+  digitalWrite(C,HIGH);
+  
+   delay(delayTime);
+  //3
+  digitalWrite(G,HIGH);
+  digitalWrite(F,LOW);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,LOW);
+  digitalWrite(D,HIGH);
+  digitalWrite(C,HIGH);
+  
+   delay(delayTime);
+  //2
+  digitalWrite(G,HIGH);
+  digitalWrite(F,LOW);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(C,LOW);
+ 
+   delay(delayTime);
+  //1
+digitalWrite(G,LOW);
+  digitalWrite(F,LOW);
+  digitalWrite(A,LOW);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,LOW);
+  digitalWrite(D,LOW);
+  digitalWrite(C,HIGH);
+   delay(delayTime);
+  //0
+ digitalWrite(G,LOW);
+  digitalWrite(F,HIGH);
+  digitalWrite(A,HIGH);
+  digitalWrite(B,HIGH);
+  digitalWrite(E,HIGH);
+  digitalWrite(D,HIGH);
+  digitalWrite(C,HIGH);
+ 
+   delay(delayTime);
+}
