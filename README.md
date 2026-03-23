@@ -1,6 +1,3 @@
-# Simple-7-segment-display-countdown
-This project uses an Arduino and a 7-segment display to create a countdown from 9 to 0. Each segment is connected through resistors to control current. The Arduino turns segments on and off to form numbers, with delays between each step, demonstrating basic electronics and programming concepts.
-.
 7-Segment Display Countdown from 9 to 0
 
 This project uses an Arduino and a 7-segment display to create a simple countdown from 9 to 0. The display shows each number by turning on the specific segments that form that digit. The countdown runs automatically with a short delay so you can see each number clearly.
